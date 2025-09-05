@@ -1,0 +1,312 @@
+body {
+    background: #f4f6f8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    transition: background 0.3s, color 0.3s;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 28px 28px 28px;
+}
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    text-align: left;
+    color: #222;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-left: 12px;
+    color: #888;
+    transition: color 0.2s;
+}
+#darkModeToggle:hover {
+    color: #222;
+}
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.form-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 4px;
+}
+.csv-upload span {
+    background: #f1c40f;
+    color: #fff;
+    border-radius: 6px;
+    padding: 7px 14px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 2px;
+    transition: background 0.2s;
+}
+.csv-upload span:hover {
+    background: #b7950b;
+}
+.download-btn {
+    background: #2ecc71;
+    color: #fff;
+    border-radius: 6px;
+    padding: 7px 14px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.download-btn:hover {
+    background: #27ae60;
+}
+.reset-btn {
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 6px;
+    padding: 7px 14px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.reset-btn:hover {
+    background: #c0392b;
+}
+textarea {
+    min-height: 80px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+    transition: border 0.2s;
+}
+textarea:focus {
+    border: 1.5px solid #3498db;
+}
+button[type="submit"] {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button[type="submit"]:hover {
+    background: #217dbb;
+}
+.result {
+    margin: 24px 0 12px 0;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+.result.positive {
+    background: #eafaf1;
+    color: #27ae60;
+    border: 1.5px solid #27ae60;
+}
+.result.negative {
+    background: #fdeaea;
+    color: #c0392b;
+    border: 1.5px solid #c0392b;
+}
+.result.neutral {
+    background: #f4f6f8;
+    color: #7f8c8d;
+    border: 1.5px solid #7f8c8d;
+}
+.sentiment-emoji {
+    font-size: 2rem;
+    margin-right: 8px;
+}
+.confidence {
+    font-size: 0.98rem;
+    color: #888;
+    margin-left: 2px;
+}
+.user-text {
+    font-style: italic;
+    color: #555;
+    margin-top: 6px;
+}
+.error {
+    color: #c0392b;
+    background: #fdeaea;
+    border: 1px solid #c0392b;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 10px 0 0 0;
+}
+.chart-section {
+    margin-top: 32px;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 18px 12px 12px 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.charts-flex {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.wordcloud-section {
+    margin-top: 32px;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 18px 12px 12px 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.wordcloud-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.wordcloud-flex {
+    display: flex;
+    gap: 24px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.no-wordcloud {
+    color: #888;
+    font-size: 1rem;
+    margin: 8px 0;
+}
+.results-table-section {
+    margin-top: 32px;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 18px 12px 12px 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.98rem;
+}
+.results-table th, .results-table td {
+    border: 1px solid #e1e4e8;
+    padding: 7px 10px;
+    text-align: left;
+}
+.results-table th {
+    background: #f4f6f8;
+    color: #333;
+}
+.results-table tr.positive td {
+    color: #27ae60;
+}
+.results-table tr.negative td {
+    color: #c0392b;
+}
+.results-table tr.neutral td {
+    color: #7f8c8d;
+}
+.no-results {
+    color: #888;
+    font-size: 1rem;
+    margin: 8px 0;
+}
+/* Dark mode */
+body.dark-mode {
+    background: #181c1f;
+    color: #eaeaea;
+}
+body.dark-mode .container {
+    background: #23272b;
+    color: #eaeaea;
+}
+body.dark-mode h1, body.dark-mode .results-table th {
+    color: #eaeaea;
+}
+body.dark-mode .chart-section,
+body.dark-mode .wordcloud-section,
+body.dark-mode .results-table-section {
+    background: #23272b;
+    color: #eaeaea;
+}
+body.dark-mode .result.positive {
+    background: #1e2e23;
+    color: #2ecc71;
+    border-color: #2ecc71;
+}
+body.dark-mode .result.negative {
+    background: #2e1e1e;
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+body.dark-mode .result.neutral {
+    background: #23272b;
+    color: #b2bec3;
+    border-color: #b2bec3;
+}
+body.dark-mode .results-table tr.positive td {
+    color: #2ecc71;
+}
+body.dark-mode .results-table tr.negative td {
+    color: #e74c3c;
+}
+body.dark-mode .results-table tr.neutral td {
+    color: #b2bec3;
+}
+body.dark-mode .download-btn {
+    background: #145a32;
+}
+body.dark-mode .download-btn:hover {
+    background: #229954;
+}
+body.dark-mode .reset-btn {
+    background: #922b21;
+}
+body.dark-mode .reset-btn:hover {
+    background: #c0392b;
+}
+body.dark-mode .csv-upload span {
+    background: #b7950b;
+}
+body.dark-mode .csv-upload span:hover {
+    background: #f1c40f;
+}
+body.dark-mode .error {
+    background: #2e1e1e;
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+@media (max-width: 900px) {
+    .container {
+        padding: 16px 2vw;
+    }
+    .charts-flex, .wordcloud-flex {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
